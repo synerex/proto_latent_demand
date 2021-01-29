@@ -1,2 +1,2 @@
-# proto_park_demand
-Protocol for Park Demand
+# proto_latent_demand
+Protocol for latent Demand

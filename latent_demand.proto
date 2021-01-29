@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package latent_demand;
+
+option go_package="github.com/synerex/proto_latent_demand";
+
+import "google/protobuf/timestamp.proto";
+
+// @type: LatentDemand
+message LatentDemand
+{
+    string _at_context = 1;
+    string _at_type = 2;
+    string name = 3;
+    google.protobuf.Timestamp date = 4;
+    Place location = 5;
+    LatentDemandDomain domain = 6;
+    string description = 7;
+    string demand_from = 8;
+    string evidence = 9;
+    bytes option = 10;  // option
+}
+
+// @type: Place
+message Place {
+    string _at_type = 1;
+    string name = 2;
+    double latitude = 3;
+    double longitude = 4;
+    PostalAddress address = 5;
+}
+
+message PostalAddress {
+    string _at_type = 1;
+    string address_locality = 2;
+    string address_region = 3;
+    string street_address = 4;
+}
+
+message LatentDemandDomain {
+    string _at_type = 1;
+    string domain_id = 2;  // ほんとに string ?
+}
