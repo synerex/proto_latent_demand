@@ -41,3 +41,23 @@ message LatentDemandDomain {
     string _at_type = 1;
     string domain_id = 2;  // ほんとに string ?
 }
+
+message LatentDemandSupply {
+    string _at_context = 1;
+    string _at_type = 2;
+    string type = 3;
+    string name = 4;
+    string description = 5;
+    bytes option = 6;  // option
+}
+
+message LatentDemandDisplay {
+    string _at_context = 1;
+    string _at_type = 2;
+    string demand_name = 3;
+    string supply_name = 4;
+    google.protobuf.Timestamp date = 5;
+    google.protobuf.Timestamp exp_date = 6;
+    string url = 7;
+    bytes option = 8;  // option
+}
