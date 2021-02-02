@@ -60,6 +60,7 @@ message LatentDemandDisplay {
     google.protobuf.Timestamp exp_date = 6;
     string url = 7;
     bytes option = 8;  // option
+    uint64 id = 9;
 }
 
 message LatentDemandSupplyURL {
