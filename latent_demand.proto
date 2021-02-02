@@ -61,3 +61,10 @@ message LatentDemandDisplay {
     string url = 7;
     bytes option = 8;  // option
 }
+
+message LatentDemandSupplyURL {
+    string _at_context = 1;
+    string _at_type = 2;
+    string url = 3;
+    bytes option = 4;  // option
+}

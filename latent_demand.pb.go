@@ -537,6 +537,77 @@ func (x *LatentDemandDisplay) GetOption() []byte {
 	return nil
 }
 
+type LatentDemandSupplyURL struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	XAtContext string `protobuf:"bytes,1,opt,name=_at_context,json=AtContext,proto3" json:"_at_context,omitempty"`
+	XAtType    string `protobuf:"bytes,2,opt,name=_at_type,json=AtType,proto3" json:"_at_type,omitempty"`
+	Url        string `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
+	Option     []byte `protobuf:"bytes,4,opt,name=option,proto3" json:"option,omitempty"` // option
+}
+
+func (x *LatentDemandSupplyURL) Reset() {
+	*x = LatentDemandSupplyURL{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_latent_demand_proto_msgTypes[6]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *LatentDemandSupplyURL) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*LatentDemandSupplyURL) ProtoMessage() {}
+
+func (x *LatentDemandSupplyURL) ProtoReflect() protoreflect.Message {
+	mi := &file_latent_demand_proto_msgTypes[6]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use LatentDemandSupplyURL.ProtoReflect.Descriptor instead.
+func (*LatentDemandSupplyURL) Descriptor() ([]byte, []int) {
+	return file_latent_demand_proto_rawDescGZIP(), []int{6}
+}
+
+func (x *LatentDemandSupplyURL) GetXAtContext() string {
+	if x != nil {
+		return x.XAtContext
+	}
+	return ""
+}
+
+func (x *LatentDemandSupplyURL) GetXAtType() string {
+	if x != nil {
+		return x.XAtType
+	}
+	return ""
+}
+
+func (x *LatentDemandSupplyURL) GetUrl() string {
+	if x != nil {
+		return x.Url
+	}
+	return ""
+}
+
+func (x *LatentDemandSupplyURL) GetOption() []byte {
+	if x != nil {
+		return x.Option
+	}
+	return nil
+}
+
 var File_latent_demand_proto protoreflect.FileDescriptor
 
 var file_latent_demand_proto_rawDesc = []byte{
@@ -622,10 +693,18 @@ var file_latent_demand_proto_rawDesc = []byte{
 	0x54, 0x69, 0x6d, 0x65, 0x73, 0x74, 0x61, 0x6d, 0x70, 0x52, 0x07, 0x65, 0x78, 0x70, 0x44, 0x61,
 	0x74, 0x65, 0x12, 0x10, 0x0a, 0x03, 0x75, 0x72, 0x6c, 0x18, 0x07, 0x20, 0x01, 0x28, 0x09, 0x52,
 	0x03, 0x75, 0x72, 0x6c, 0x12, 0x16, 0x0a, 0x06, 0x6f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x08,
-	0x20, 0x01, 0x28, 0x0c, 0x52, 0x06, 0x6f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x42, 0x28, 0x5a, 0x26,
-	0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x73, 0x79, 0x6e, 0x65, 0x72,
-	0x65, 0x78, 0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x5f, 0x6c, 0x61, 0x74, 0x65, 0x6e, 0x74, 0x5f,
-	0x64, 0x65, 0x6d, 0x61, 0x6e, 0x64, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x20, 0x01, 0x28, 0x0c, 0x52, 0x06, 0x6f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x7b, 0x0a, 0x15,
+	0x4c, 0x61, 0x74, 0x65, 0x6e, 0x74, 0x44, 0x65, 0x6d, 0x61, 0x6e, 0x64, 0x53, 0x75, 0x70, 0x70,
+	0x6c, 0x79, 0x55, 0x52, 0x4c, 0x12, 0x1e, 0x0a, 0x0b, 0x5f, 0x61, 0x74, 0x5f, 0x63, 0x6f, 0x6e,
+	0x74, 0x65, 0x78, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x09, 0x41, 0x74, 0x43, 0x6f,
+	0x6e, 0x74, 0x65, 0x78, 0x74, 0x12, 0x18, 0x0a, 0x08, 0x5f, 0x61, 0x74, 0x5f, 0x74, 0x79, 0x70,
+	0x65, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x06, 0x41, 0x74, 0x54, 0x79, 0x70, 0x65, 0x12,
+	0x10, 0x0a, 0x03, 0x75, 0x72, 0x6c, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x03, 0x75, 0x72,
+	0x6c, 0x12, 0x16, 0x0a, 0x06, 0x6f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x04, 0x20, 0x01, 0x28,
+	0x0c, 0x52, 0x06, 0x6f, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x42, 0x28, 0x5a, 0x26, 0x67, 0x69, 0x74,
+	0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x73, 0x79, 0x6e, 0x65, 0x72, 0x65, 0x78, 0x2f,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x5f, 0x6c, 0x61, 0x74, 0x65, 0x6e, 0x74, 0x5f, 0x64, 0x65, 0x6d,
+	0x61, 0x6e, 0x64, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -640,7 +719,7 @@ func file_latent_demand_proto_rawDescGZIP() []byte {
 	return file_latent_demand_proto_rawDescData
 }
 
-var file_latent_demand_proto_msgTypes = make([]protoimpl.MessageInfo, 6)
+var file_latent_demand_proto_msgTypes = make([]protoimpl.MessageInfo, 7)
 var file_latent_demand_proto_goTypes = []interface{}{
 	(*LatentDemand)(nil),          // 0: latent_demand.LatentDemand
 	(*Place)(nil),                 // 1: latent_demand.Place
@@ -648,15 +727,16 @@ var file_latent_demand_proto_goTypes = []interface{}{
 	(*LatentDemandDomain)(nil),    // 3: latent_demand.LatentDemandDomain
 	(*LatentDemandSupply)(nil),    // 4: latent_demand.LatentDemandSupply
 	(*LatentDemandDisplay)(nil),   // 5: latent_demand.LatentDemandDisplay
-	(*timestamppb.Timestamp)(nil), // 6: google.protobuf.Timestamp
+	(*LatentDemandSupplyURL)(nil), // 6: latent_demand.LatentDemandSupplyURL
+	(*timestamppb.Timestamp)(nil), // 7: google.protobuf.Timestamp
 }
 var file_latent_demand_proto_depIdxs = []int32{
-	6, // 0: latent_demand.LatentDemand.date:type_name -> google.protobuf.Timestamp
+	7, // 0: latent_demand.LatentDemand.date:type_name -> google.protobuf.Timestamp
 	1, // 1: latent_demand.LatentDemand.location:type_name -> latent_demand.Place
 	3, // 2: latent_demand.LatentDemand.domain:type_name -> latent_demand.LatentDemandDomain
 	2, // 3: latent_demand.Place.address:type_name -> latent_demand.PostalAddress
-	6, // 4: latent_demand.LatentDemandDisplay.date:type_name -> google.protobuf.Timestamp
-	6, // 5: latent_demand.LatentDemandDisplay.exp_date:type_name -> google.protobuf.Timestamp
+	7, // 4: latent_demand.LatentDemandDisplay.date:type_name -> google.protobuf.Timestamp
+	7, // 5: latent_demand.LatentDemandDisplay.exp_date:type_name -> google.protobuf.Timestamp
 	6, // [6:6] is the sub-list for method output_type
 	6, // [6:6] is the sub-list for method input_type
 	6, // [6:6] is the sub-list for extension type_name
@@ -742,6 +822,18 @@ func file_latent_demand_proto_init() {
 				return nil
 			}
 		}
+		file_latent_demand_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*LatentDemandSupplyURL); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
 	}
 	type x struct{}
 	out := protoimpl.TypeBuilder{
@@ -749,7 +841,7 @@ func file_latent_demand_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_latent_demand_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   6,
+			NumMessages:   7,
 			NumExtensions: 0,
 			NumServices:   0,
 		},
