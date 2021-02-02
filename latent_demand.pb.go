@@ -27,8 +27,8 @@ type LatentDemand struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	XAtContext  string                 `protobuf:"bytes,1,opt,name=_at_context,json=AtContext,proto3" json:"_at_context,omitempty"`
-	XAtType     string                 `protobuf:"bytes,2,opt,name=_at_type,json=AtType,proto3" json:"_at_type,omitempty"`
+	XAtContext  string                 `protobuf:"bytes,1,opt,name=_at_context,json=AtContext,proto3" json:"@context,omitempty"`
+	XAtType     string                 `protobuf:"bytes,2,opt,name=_at_type,json=AtType,proto3" json:"@type,omitempty"`
 	Name        string                 `protobuf:"bytes,3,opt,name=name,proto3" json:"name,omitempty"`
 	Date        *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=date,proto3" json:"date,omitempty"`
 	Location    *Place                 `protobuf:"bytes,5,opt,name=location,proto3" json:"location,omitempty"`
@@ -147,7 +147,7 @@ type Place struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	XAtType   string         `protobuf:"bytes,1,opt,name=_at_type,json=AtType,proto3" json:"_at_type,omitempty"`
+	XAtType   string         `protobuf:"bytes,1,opt,name=_at_type,json=AtType,proto3" json:"@type,omitempty"`
 	Name      string         `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 	Latitude  float64        `protobuf:"fixed64,3,opt,name=latitude,proto3" json:"latitude,omitempty"`
 	Longitude float64        `protobuf:"fixed64,4,opt,name=longitude,proto3" json:"longitude,omitempty"`
@@ -226,7 +226,7 @@ type PostalAddress struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	XAtType         string `protobuf:"bytes,1,opt,name=_at_type,json=AtType,proto3" json:"_at_type,omitempty"`
+	XAtType         string `protobuf:"bytes,1,opt,name=_at_type,json=AtType,proto3" json:"@type,omitempty"`
 	AddressLocality string `protobuf:"bytes,2,opt,name=address_locality,json=addressLocality,proto3" json:"address_locality,omitempty"`
 	AddressRegion   string `protobuf:"bytes,3,opt,name=address_region,json=addressRegion,proto3" json:"address_region,omitempty"`
 	StreetAddress   string `protobuf:"bytes,4,opt,name=street_address,json=streetAddress,proto3" json:"street_address,omitempty"`
@@ -297,7 +297,7 @@ type LatentDemandDomain struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	XAtType  string `protobuf:"bytes,1,opt,name=_at_type,json=AtType,proto3" json:"_at_type,omitempty"`
+	XAtType  string `protobuf:"bytes,1,opt,name=_at_type,json=AtType,proto3" json:"@type,omitempty"`
 	DomainId string `protobuf:"bytes,2,opt,name=domain_id,json=domainId,proto3" json:"domain_id,omitempty"` // ほんとに string ?
 }
 
@@ -352,8 +352,8 @@ type LatentDemandSupply struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	XAtContext  string `protobuf:"bytes,1,opt,name=_at_context,json=AtContext,proto3" json:"_at_context,omitempty"`
-	XAtType     string `protobuf:"bytes,2,opt,name=_at_type,json=AtType,proto3" json:"_at_type,omitempty"`
+	XAtContext  string `protobuf:"bytes,1,opt,name=_at_context,json=AtContext,proto3" json:"@context,omitempty"`
+	XAtType     string `protobuf:"bytes,2,opt,name=_at_type,json=AtType,proto3" json:"@type,omitempty"`
 	Type        string `protobuf:"bytes,3,opt,name=type,proto3" json:"type,omitempty"`
 	Name        string `protobuf:"bytes,4,opt,name=name,proto3" json:"name,omitempty"`
 	Description string `protobuf:"bytes,5,opt,name=description,proto3" json:"description,omitempty"`
@@ -439,8 +439,8 @@ type LatentDemandDisplay struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	XAtContext string                 `protobuf:"bytes,1,opt,name=_at_context,json=AtContext,proto3" json:"_at_context,omitempty"`
-	XAtType    string                 `protobuf:"bytes,2,opt,name=_at_type,json=AtType,proto3" json:"_at_type,omitempty"`
+	XAtContext string                 `protobuf:"bytes,1,opt,name=_at_context,json=AtContext,proto3" json:"@context,omitempty"`
+	XAtType    string                 `protobuf:"bytes,2,opt,name=_at_type,json=AtType,proto3" json:"@type,omitempty"`
 	DemandName string                 `protobuf:"bytes,3,opt,name=demand_name,json=demandName,proto3" json:"demand_name,omitempty"`
 	SupplyName string                 `protobuf:"bytes,4,opt,name=supply_name,json=supplyName,proto3" json:"supply_name,omitempty"`
 	Date       *timestamppb.Timestamp `protobuf:"bytes,5,opt,name=date,proto3" json:"date,omitempty"`
@@ -550,8 +550,8 @@ type LatentDemandSupplyURL struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	XAtContext string `protobuf:"bytes,1,opt,name=_at_context,json=AtContext,proto3" json:"_at_context,omitempty"`
-	XAtType    string `protobuf:"bytes,2,opt,name=_at_type,json=AtType,proto3" json:"_at_type,omitempty"`
+	XAtContext string `protobuf:"bytes,1,opt,name=_at_context,json=AtContext,proto3" json:"@context,omitempty"`
+	XAtType    string `protobuf:"bytes,2,opt,name=_at_type,json=AtType,proto3" json:"@type,omitempty"`
 	Url        string `protobuf:"bytes,3,opt,name=url,proto3" json:"url,omitempty"`
 	Option     []byte `protobuf:"bytes,4,opt,name=option,proto3" json:"option,omitempty"` // option
 }
